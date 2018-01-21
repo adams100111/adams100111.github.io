@@ -1,0 +1,75 @@
+{% if page.banner %}
+  <nav class="navbar navbar-default" id="navbar">
+{% else %}
+  <nav class="navbar navbar-default fixed" id="navbar">
+{% endif %}
+  <div class="top-bg">
+    <div class="frontend">
+      <div class="right"></div>
+      <div class="left"></div>
+    </div>
+  </div>
+  <div class="container" style="padding: 0px;">
+    <div class="navbar-header">
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#toggle_navbar" aria-expanded="false"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="{{ site.navbar[page.lang].home.url | prepend: site.baseurl }}"></a>
+    </div>
+    <div class="collapse navbar-collapse reset" id="toggle_navbar">
+      <ul class="nav navbar-nav">
+        <li class="{% if page.ref == 'index' %} active {% endif %}"><a href="{{ site.navbar[page.lang].home.url | prepend: site.baseurl }}"> 
+          <span class="icon fa fa-home"></span>
+          <span class="navbar-title">{{ site.navbar[page.lang].home.title }}</span>
+          <span class="sr-only">(current)</span>
+        </a></li>
+        <li class="{% if page.ref == 'cv' %} active {% endif %}"><a href="{{ site.navbar[page.lang].cv.url | prepend: site.baseurl }}"> 
+          <span class="icon fa fa-file-text"></span>
+          <span class="navbar-title">{{ site.navbar[page.lang].cv.title }}</span>
+        </a></li>
+        <li class="{% if page.ref == 'blog' %} active {% endif %}"><a href="{{ site.navbar[page.lang].blog.url | prepend: site.baseurl }}">
+          <span class="icon fa fa-edit"></span>
+          <span class="navbar-title">{{ site.navbar[page.lang].blog.title }}</span>
+          </a></li>
+        <li class="{% if page.ref == 'portfolio' %} active {% endif %}"><a href="{{ site.navbar[page.lang].portfolio.url | prepend: site.baseurl }}">
+          <span class="icon fa fa-cube"></span>
+          <span class="navbar-title">{{ site.navbar[page.lang].portfolio.title }}</span>
+        </a></li>
+        <li class="mobile-only"> 
+          <!-- <a href="#">عربي &nbsp;<span class="icon fa fa-language"></span></a> -->
+          {% assign pages=site.pages | where:"ref", page.ref | sort: 'lang' %}
+          {% for pageIn in pages %} 
+            {%if page.lang != pageIn.lang %}  
+              <a href="{{ pageIn.url | prepend: site.baseurl }}" style="border: none;" class="language">
+                <strong>{% if  pageIn.lang == "ar" %} 
+                  عــــربي 
+                {%else%} 
+                  English 
+                {% endif %}
+                <!-- &nbsp; <span class="fa fa-language"></span> -->
+              </strong></a> 
+            {%endif%}
+          {% endfor %}
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right reset mobile-none">
+        <li> 
+          <!-- <a href="#">عربي &nbsp;<span class="icon fa fa-language"></span></a> -->
+          {% assign pages=site.pages | where:"ref", page.ref | sort: 'lang' %}
+          {% for pageIn in pages %} 
+            {%if page.lang != pageIn.lang %}  
+              <a href="{{ pageIn.url | prepend: site.baseurl }}" style="border: none;" class="language">
+                <strong>{% if  pageIn.lang == "ar" %} 
+                  عــــربي 
+                {%else%} 
+                  English 
+                {% endif %}
+                <!-- &nbsp; <span class="fa fa-language"></span> -->
+              </strong></a> 
+            {%endif%}
+          {% endfor %}
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right reset mobile-none">
+          <li class="social-icons">{% include navbar-social-icons.html %}</li>
+      </ul>
+    </div>
+  </div>
+</nav>

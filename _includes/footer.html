@@ -1,0 +1,21 @@
+<footer id="footer">
+  <!-- <div class="container"> -->
+    <hr>
+    <div class="row">
+      <div class="col-md-6 col-xs-12 text-left">
+        <strong>
+          <span class="text-primary">{{ site.name[page.lang] }}</span> 
+          &nbsp;|&nbsp; 
+          <span class="text-secondary">{{ site.title[page.lang] }}</span>
+        </strong>
+      </div>
+      <div class="col-md-6 col-xs-12 text-right">
+        {% if page.lang == 'ar'%}
+          <div class="copy-rights">جميع الحقوق محفوظة &copy; 2014 - 2018</div>
+        {% else %}
+          <div class="copy-rights">All rights reserved &copy; 2014 - 2018</div>
+        {% endif %}
+      </div>
+    </div>
+  <!-- </div> -->
+</footer>

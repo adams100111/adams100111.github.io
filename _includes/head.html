@@ -1,0 +1,32 @@
+<head>
+  {% include meta.html %}
+
+  <title>{% if page.title %}{{ page.title | escape }} | {{ site.name[page.lang] | escape }}{% else %}{{ site.name[page.lang] | escape }}{% endif %}</title>
+
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  {% assign posts=site.posts | where:"ref", page.ref | sort: 'lang' %}
+  {% for post in posts %}
+    <link rel="alternate" hreflang="{{ post.lang }}" href="{{ post.url }}" />
+  {% endfor %}
+  {% assign pages=site.pages | where:"ref", page.ref | sort: 'lang' %}
+  {% for page in pages %}
+    <link rel="alternate" hreflang="{{ page.lang }}" href="{{ page.url }}" />
+  {% endfor %}
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title[page.lang] }}" href="{{ site.feed[page.lang] | prepend: site.baseurl | prepend: site.url }}">
+  
+  <link href="https://fonts.googleapis.com/css?family=Changa:400|Open+Sans:400" rel="stylesheet">
+  {% if page.devicons %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/devicon/2.2/devicon-colors.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/devicon/2.2/devicon-colors.min.css" />
+  {% endif %}
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+  
+  <!-- <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/simple-scrollbar.css"/> -->
+  <link rel="stylesheet" href="{{ "/css/styles.css" | prepend: site.baseurl }}">
+  {% if page.lang == 'ar' %}
+    <link rel="stylesheet" type="text/css" href="{{ "/css/ar.css" | prepend: site.baseurl }}">
+  {% else %}
+    <link rel="stylesheet" type="text/css" href="{{ "/css/en.css" | prepend: site.baseurl }}">
+  {% endif %}
+</head>

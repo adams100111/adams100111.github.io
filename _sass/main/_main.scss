@@ -1,0 +1,258 @@
+// @import url('https://fonts.googleapis.com/css?family=Changa:400,700|Open+Sans:400,700');
+
+body
+{
+	background-color: $light-color;
+	// background-color: $white;
+	position: relative;
+	color: #5d6b6d;
+	font-family: 'Open Sans', 'Changa', sans-serif;
+	font-weight: 400;
+}
+
+body::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: rgba(0,0,0,0.1);
+  border: 1px solid #ccc;
+}
+
+@for $i from 1 through 6
+{
+    h#{$i}{
+        // font-family: $primary-font-bold, $secondary-font-bold, san-sereif;
+        font-weight: 700;
+        color: inherit;
+    }
+}
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: linear-gradient(left, #fff, #e4e4e4);
+  border: 1px solid #aaa;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: #fff;
+}
+
+body::-webkit-scrollbar-thumb:active {
+  background: linear-gradient(left, #22ADD4, #1E98BA);
+}
+
+.title-primary{
+	color: $primary-color;
+    text-shadow: 4px 3px 0 darken($primary-color, 24%), 8px 6px 0 #1080af;
+}
+
+.title-font-xl{
+	font-family: $dosisXL-font, sans-serif !important;
+}
+
+.title-xl{
+	font-family: $dosisXL-font !important;
+	color: $primary-color !important;
+}
+
+.heart{color: $secondary-color;}
+
+.text-primary{color: $primary-color;}
+.bg-primary{background-color: $primary-color;}
+
+.text-secondary{color: $secondary-color;}
+.bg-secondary{background-color: $secondary-color;}
+
+mark{
+	line-height: 48px;
+	padding: 0px 16px;
+	background-color: $light-color;
+	color: $secondary-color;
+}
+
+.reset{margin: 0;padding: 0;}
+.section{
+	min-height: 100vh;
+}
+
+.btn-custom{
+    // padding: 8px 0px;
+    // border-radius: 3px;
+	background-color: transparent;
+    // border: px solid transparentize($secondary-color, 0.6) !important;
+	color: $secondary-color !important;
+	border-color: $secondary-color !important;
+    display: inline-block;
+    // padding: 0px 16px;
+    // margin: 11px 0px 0px 36px !important;
+    // height: 30px;
+	// width: auto;
+	// line-height: 25px;
+	text-align: center;
+	&:hover, &:focus, &:active{
+    	background-color: $secondary-color;
+    	color: #fff !important;
+    	// border-color: $secondary-color;
+	}
+
+}
+
+hr {
+  height: 6px;
+  background: url("/images/hr-12.png") repeat-x 0 0;
+  border: 0;
+  margin: 48px 0px;
+}
+
+
+.side-title{
+	$color: lighten($dark-color, 8%);
+	// $color: darken($light-color, 32%);
+	border: 1px solid $color;
+	display: block;
+	width: 200px;
+	padding: 8px 16px;
+	position: relative;
+	margin: 32px auto;
+	text-align: center;
+	border-radius: 32px;
+	&:before, &:after{
+		content: "";
+		display: block;
+		height: 1px;
+		width: 458px;
+		background: $color;
+		position: absolute;
+		top: 20px;
+	}
+
+	&:before{ left: -458px; }
+	&:after{ right: -458px; }
+}
+
+.language{display: none;}
+
+@keyframes forwardScroll {
+	0% {
+		transform: translateY(-40px);
+	}
+	100% {
+		transform: translateY(0px);
+	}
+}
+
+@keyframes backwordkScroll {
+	0% {
+		transform: translateY(0px);
+	}
+	100% {
+		transform: translateY(-40px);
+	}
+}
+
+
+@keyframes arrowDown {
+	0% {
+		transform: translateY(0px);
+		color: $primary-color;
+	}
+	// 40%{
+	// 	transform: translateY(40px);
+	// }
+	100% {
+		color: $secondary-color;
+		transform: translateY(32px);
+	}
+}
+
+
+@-webkit-keyframes typing { from { width: 0; } }
+@-webkit-keyframes blink-caret { 50% { border-color: transparent; } }
+
+@keyframes type{ 
+  from { width: 0; } 
+} 
+
+@keyframes type2{
+  0%{width: 0;}
+  50%{width: 0;}
+  100%{ width: 100; } 
+} 
+
+@keyframes blink{
+  to{opacity: .0;}
+}
+
+::selection{
+  background: #333;
+  color: #fff;
+}
+
+
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form{
+	background-color: #fff;
+}
+
+
+
+.col-xs-15,
+.col-sm-15,
+.col-md-15,
+.col-lg-15,
+.col-xs-17,
+.col-sm-17,
+.col-md-17,
+.col-lg-17 
+{
+    position: relative;
+    min-height: 1px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+
+.col-xs-15 {
+    width: 20%;
+    float: left;
+}
+
+.col-xs-17 {
+    width: 80%;
+    float: left;
+}
+
+@media (min-width: 768px) {
+	.col-sm-15 {
+        width: 20%;
+        float: left;
+    }
+
+	.col-sm-17 {
+        width: 80%;
+        float: left;
+    }    
+}
+
+@media (min-width: 992px) {
+    .col-md-15 {
+        width: 20%;
+        float: left;
+    }
+	
+	.col-md-17 {
+        width: 80%;
+        float: left;
+    }
+
+}
+
+@media (min-width: 1200px) {
+    .col-lg-15 {
+        width: 20%;
+        float: left;
+    }
+
+	.col-lg-17 {
+        width: 80%;
+        float: left;
+    }
+}

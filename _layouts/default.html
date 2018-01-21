@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+    {% include header.html %}
+    <div class="container" style="background-color: white; overflow: hidden; border-left: 1px solid #ddd; border-right: 1px solid #ddd;">
+    {% if page.banner %}
+      <div id="content" class="{{ page.ref }}">
+    {% else %}
+      <div id="content" style="margin-top: 50px; padding-top: 15px;"  class="{{ page.ref }}">
+    {% endif %}
+      {{ content }}
+    </div>
+
+    {% include footer.html %}
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    {% if page.banner %}
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/typeit/5.4.1/typeit.min.js"></script>
+      <script type="text/javascript" src="{{ '/js/nav-scroll.js' | append: site.baseurl }}"></script>
+    {% endif %}
+    <!-- <script type="text/javascript" src="{{ '/js/simple-scrollbar.js' | append: site.baseurl }}"></script> -->
+    <script type="text/javascript" src="{{ '/js/scripts.js' | append: site.baseurl }}"></script>
+  </body>
+
+</html>

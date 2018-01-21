@@ -1,0 +1,76 @@
+@media only screen and (max-width: 768px) {
+	.mobile-none{display: none !important;}
+	.mobile-only{display: block !important;}
+	body{
+		font-size: 12px !important;
+		h1{font-size: 1.8em;}
+		h2{font-size: 1.6em;}
+		h3{font-size: 1.4em;}
+		h4{font-size: 1.2em;}
+		.blockquote{
+			font-size: 1.4em;
+			p{
+				font-size: 0.96em;
+			}
+		}
+	}
+	#header {height: 62px !important;}
+	#header .navbar-default.fixed{
+		.navbar-header{
+			width: 100%;
+			.navbar-brand, button.navbar-toggle {
+				margin: 0px !important;
+			    position: absolute;
+			    top: 13px;
+			}
+		}
+		.navbar-nav {
+		    width: 100%;
+		    margin: 57px 0px 0px;
+			border-top: 1px solid #ddd;
+			box-shadow: 0px 2px 4px  #ddd;
+		    > li{
+		    	float: none;
+		    	> a{
+		    		padding: 0px;
+		    		height: 32px;
+		    		line-height: 32px;
+		    		border: none !important;
+					border-bottom: 1px solid #ddd !important;
+		    	}
+		    	> .language{
+		    		margin: 0;
+		    		border-bottom: 1px solid $secondary-color;
+		    	}
+		    }
+		}
+	} 
+	.cv{
+		margin-top: 15px !important;
+		padding-top: 0;
+		.info-view {
+		    max-height: inherit;
+		    overflow-y: auto;
+		}
+		.profile .profile-img {
+		    max-width: 240px;
+		    height: 240px;
+		    margin: 0 auto;
+		} 
+	}
+	#content, #footer{
+		padding: 0px 15px;
+	}
+	.col-xs-12{
+		padding: 0 !important;
+	}
+	.section{min-height: 160px;}
+	#footer{
+		.text-left,
+		.text-right{
+			float: none;
+			text-align: center;
+		}
+	}
+
+}

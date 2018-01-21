@@ -1,0 +1,38 @@
+---
+layout: default
+title: "Blog"
+permalink: /blog/
+ref: blog
+lang: en
+---
+<section class="section">
+	<div class="container">
+		<h1 class="text-center"><span class="fa fa-cubes"></span><br>Under development</h1>
+	</div>
+</section>
+<!-- <header class="blog-header">
+	<h2 class="text-center">
+		{{ site.name[page.lang] }} . {{ site.navbar[page.lang].blog.title }}
+	</h2>
+</header>
+<div class="section clearfix">
+	{% assign latest_posts = site.posts | where:"lang", page.lang | sort: page.category | limit: 8%}
+	{% assign latest_posts_count = latest_posts | size %}
+	{% if latest_posts_count > 0 %}
+	{% endif %}
+	<div class="col-md-12">
+		{% assign posts=site.posts | where:"lang", page.lang  | sort: page.category %}
+		{% for post in posts %}
+			<div class="col-xs-12 col-md-6">
+				<article class="post-preview" itemscope itemtype="http://schema.org/BlogPosting">
+					<a href="{{ site.baseurl }}{{ post.url }}"><img src="{{ post.image | prepend: site.baseurl }}" alt="post_image" class="post-image"></a>
+					<div class="content">
+						<h3 class="post-title">{{ post.title }}</h3>
+						<p>{{ post.description }}</p>
+						<a href="{{ site.baseurl }}{{ post.url }}" class="btn read-more">Read More</a>
+					</div>
+				</article>
+			</div>
+		{% endfor %}
+	</div>
+</div> -->

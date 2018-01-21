@@ -1,0 +1,29 @@
+#content{
+	.intro-heading{
+		line-height: 48px;
+	}
+	.intro{
+		text-align: center;
+		margin: 0px !important;
+		height: 100vh;
+		position: relative;
+		footer{
+			color: $brown;
+			text-align: left;
+		}
+		.author{
+			// float: left;
+			display: block;
+		}
+		img.sign{
+			display: block;
+			// margin: 8px 8px 8px -32px;
+			width: 240px;
+			height: 100px;
+			// float: right;
+			transform: translateX(-80px) translateY(-16px);
+		}
+	}
+}
+
+#content.mt{margin-top: 96px;}

@@ -1,0 +1,35 @@
+---
+layout: default
+title: "المدونة"
+ref: blog
+permalink: /ar/blog
+lang: ar
+---
+<section class="section">
+	<div class="container">
+		<h1 class="text-center"><span class="fa fa-cubes"></span><br>قيد التطوير</h1>
+	</div>
+</section>
+
+<!-- <header class="blog-header">
+	<h2 class="text-center">
+		{{ site.name[page.lang] }} . {{ site.navbar[page.lang].blog.title }}
+	</h2>
+</header>
+<div class="section clearfix">
+	<div class="col-md-12">
+		{% assign posts=site.posts | where:"lang", page.lang  | sort: page.category %}
+		{% for post in posts %}
+			<div class="col-xs-12 col-md-6">
+				<article class="post-preview" itemscope itemtype="http://schema.org/BlogPosting">
+					<a href="{{ site.baseurl }}{{ post.url }}"><img src="{{ post.image | prepend: site.baseurl }}" alt="post_image" class="post-image"></a>
+					<div class="content">
+						<h3 class="post-title">{{ post.title }}</h3>
+						<p>{{ post.description }}</p>
+						<a href="{{ site.baseurl }}{{ post.url }}" class="btn read-more">اقرأ المقال كاملا</a>
+					</div>
+				</article>
+			</div>
+		{% endfor %}
+	</div>
+</div> -->

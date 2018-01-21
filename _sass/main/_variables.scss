@@ -1,0 +1,58 @@
+// Colors Variables
+$primary-color: #149bd4;
+// $primary-color: #416170;
+
+$primary-dark-color: #3b5663;
+
+$secondary-color: #f26c50;
+$secondary-dark-color: #e5654a;
+
+$white: #fff;
+$dark: #000;
+$light-color: #f5f5f5;
+$dark-color: #555;
+
+$shadow-color: darken($light-color, 8%);
+
+$green: #caff00;
+$brown: #ff784e;
+
+$dark-blue: #416170;
+$orange: #e5654a;
+
+$light-blue: #149bd4;
+$lighter-blue: #65b4ff;
+$dark-blue: #0183ff;
+
+$yellow: #ded707;
+// Fonts Variables
+
+
+$changa-font: "Changa";
+$changaB-font: "ChangaB";
+
+$openSans-font: "openSans";
+$openSansB-font: "openSansB";
+
+
+
+$dosis-font: "Dosis";
+$dosisXL-font: "DosisExtraLight";
+$dosisL-font: "DosisLight";
+$dosisB-font: "DosisBold";
+
+
+$primary-font: $openSans-font;
+$primary-font-bold: $openSansB-font;
+$secondary-font: $changa-font;
+$secondary-font-bold: $changa-font;
+
+
+$font-size: 16px;
+
+$padding: 16px;
+$margin: 16px;
+
+$border-size: 1px;
+
+

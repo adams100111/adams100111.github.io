@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+    <div class="container-fluid reset">
+      <div class="">
+        <div class="col-md-3 reset">
+          {% include sidebar.html %}
+        </div>
+        <div class="blog-wrapper col-md-9 clearfix">
+          <div class="col-md-12 reset">
+            <div id="blog-content">
+              {{ content }}
+            </div>
+          </div>
+          <div class="col-md-12 reset">
+            <footer id="blog-footer" class="clearfix">
+                <hr>
+                  <div class="col-md-6 col-xs-6 text-left">
+                    <strong>
+                      <span class="text-primary">{{ site.name[page.lang] }}</span> 
+                      &nbsp;|&nbsp; 
+                      <span class="text-secondary">{{ site.navbar[page.lang].blog.title }}</span>
+                    </strong>
+                  </div>
+                  <div class="col-md-6 col-xs-6 text-right">
+                    <div class="copy-rights">All rights reserved &copy; 2014 - 2018</div>
+                  </div>
+            </footer>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="{{ '/js/jquery.min.js' | append: site.baseurl }}"></script>
+    <script type="text/javascript" src="{{ '/js/bootstrap.min.js' | append: site.baseurl }}"></script>
+    <!-- <script type="text/javascript" src="{{ '/js/simple-scrollbar.js' | append: site.baseurl }}"></script>
+    <script type="text/javascript" src="{{ '/js/scripts.js' | append: site.baseurl }}"></script>-->
+  </body>
+
+</html>

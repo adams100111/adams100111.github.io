@@ -1,0 +1,32 @@
+{% if page.banner %}
+<header id="header" style="height: 100vh">
+  <!-- Start Site Banner-->
+    <div id="site-banner">
+      <div class="backend"></div>
+      <div class="frontend">
+        <div class="wrapper">
+          <div class="img-bg"></div>
+          <div class="img"></div><a class="down-arrow" href="#content"><span class="fa fa-hand-o-down"></span></a>
+          <div class="right-side"></div>
+          <div class="left-side"></div>
+          <div class="right">
+            <div class="platform">
+              <header><span class="icon fa fa-code"></span></header>
+              <div id="code"></div>
+            </div>
+          </div>
+          <div class="left">
+            <div class="platform">
+              <header><span class="icon fa fa-pencil"> </span></header>
+              <div id="text"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!-- End Site Banner-->
+{% else %}
+  <header id="header">
+{% endif %}
+  {% include navbar.html %}
+</header>

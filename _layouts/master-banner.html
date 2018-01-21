@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    {% include meta.html %}
+    <title>{% if page.title %} {{ page.title }} | {% endif %}{{ site.name }}</title>
+
+    <link rel="icon" href="{{ site.baseurl }}/images/favicons/favicon-16x16.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="{{ site.baseurl }}/images/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="{{ site.baseurl }}/images/favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="{{ site.baseurl }}/images/favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/devicon.css"/>
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/devicon-colors.css"/>
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/font-awesome.min.css"/>
+    <!-- <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/style.css"/> -->
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/styles.css" />
+  </head>
+  <body>
+    <!-- Start Site Header-->
+    <header id="header">
+      <!-- Start Site Banner-->
+      <div id="site-banner">
+        <div class="backend"></div>
+        <div class="frontend">
+          <div class="wrapper">
+            <div class="img-bg"></div>
+            <div class="img"></div><a class="down-arrow" href="#content"><span class="fa fa-hand-o-down"></span></a>
+            <div class="right-side"></div>
+            <div class="left-side"></div>
+            <div class="right">
+              <div class="platform">
+                <header><span class="icon fa fa-code"></span></header>
+                <div id="code"></div>
+              </div>
+            </div>
+            <div class="left">
+              <div class="platform">
+                <header><span class="icon fa fa-pencil"> </span></header>
+                <div id="text"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Site Banner-->
+      <!-- Start site navigation-->
+      <nav class="navbar navbar-default bbsc" id="navbar">
+        <div class="top-bg">
+          <div class="frontend">
+            <div class="right"></div>
+            <div class="left"></div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="navbar-header">
+            <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#toggle_navbar" aria-expanded="false"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="{{ site.baseurl }}/"></a>
+          </div>
+          <div class="collapse navbar-collapse reset" id="toggle_navbar">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="{{ site.baseurl }}/"> 
+                    <span class="fa fa-home"></span>Home
+                    <span class="sr-only">(current)</span>
+                </a></li>
+              <li> <a href="{{ site.baseurl }}/cv"> <span class="fa fa-file-text"> </span>CV</a></li>
+              <li><a href="{{ site.baseurl }}/blog">
+                    <span class="fa fa-edit"></span>Blog
+                </a></li>
+              <li><a href="{{ site.baseurl }}/portfolio">
+                <span class="fa fa-cube"></span>Portfolio
+                </a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right reset">
+              <li> <a href="#">
+                   عربي &nbsp;<span class="fa fa-language"></span></a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right reset">
+                <li class="social-icons">{% include navbar-social-icons.html %}</li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- End site navigation-->
+    </header>
+    <!-- End Site Header-->
+    <section id="content">
+        {{ content }}
+    </section>
+    <footer id="footer">
+      <div class="container">
+        <hr>
+        <div class="row">
+          <div class="col-md-3 col-xs-6 text-left"><strong> <span class="text-primary">A.D Adams </span>| <span class="text-secondary">Personal Website </span></strong></div>
+          <div class="col-md-4 col-xs-6 text-center reset">
+              {% include svg-icons.html %}
+          </div>
+          <div class="col-md-3 col-xs-6 text-right">
+            <div class="copy-rights">All rights reserved &copy; 2014 - 2018</div>
+          </div>
+          <div class="col-md-2 col-xs-6 text-center">
+              <img src="{{ site.baseurl }}/images/sign.svg" class="sign">
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script type="text/javascript" src="{{ site.baseurl }}/js/jquery.min.js"></script>
+    <script type="text/javascript" src="{{ site.baseurl }}/js/jquery.typist.min.js"></script>
+    <script type="text/javascript" src="{{ site.baseurl }}/js/typeit.min.js"></script>
+    <script type="text/javascript" src="{{ site.baseurl }}/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="{{ site.baseurl }}/js/nav-scroll.js"></script>
+    <script type="text/javascript" src="{{ site.baseurl }}/js/scripts.js"></script>
+  </body>
+</html>

@@ -1,0 +1,70 @@
+---
+---
+// @import "reset";
+// @import "variables";
+
+
+// @import "bootstrap";
+
+// @import "style";
+// @import "main/bootstrap-resets";
+
+
+// @import "highlights";
+// @import "svg-icons";
+
+
+// @import "reset";
+// @import "main/variables";
+// @import "variables";
+
+// @import "highlights";
+// @import "svg-icons";
+
+
+@import "style";
+body{
+	font-family: $secondary-font, $primary-font;
+}
+#header .navbar-default{
+	.navbar-header{margin-left: 5px;}
+	&.fixed{}
+	.navbar-nav > li {
+		> a{border-right: 1px solid #ddd;}
+	}
+
+	.navbar-nav > li > .language {margin: 10px 0px 0px 32px;}
+
+}
+
+#layout{padding-right: 16px;}
+.social-icons{
+	// right: -25px;
+	.social-link{}
+}
+
+.side-menu > li > a{> i {left: 0;}}
+
+.title-primary{
+	color: #fff;
+	text-shadow: 2px 3px 0px $primary-color, 4px 6px 0px darken($primary-color, 16%);
+}
+
+.title-primary{
+	color: #c1ecff;
+    text-shadow: -2px 3px 0px #5fc7f3, -4px 6px 0px #0d6489;
+}
+
+@media only screen and (max-width: 768px) {
+	#header .navbar-default.fixed{
+		.navbar-header{
+			width: 100%;
+			.navbar-brand {
+			    left: 13px;
+			}
+			button.navbar-toggle {
+			    right: 13px;
+			}
+		}
+	}
+}

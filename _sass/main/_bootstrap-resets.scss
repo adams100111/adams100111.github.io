@@ -1,0 +1,80 @@
+.col-md-1, 
+.col-md-2, 
+.col-md-3, 
+.col-md-4, 
+.col-md-5, 
+.col-md-6, 
+.col-md-7, 
+.col-md-8, 
+.col-md-9, 
+.col-md-10, 
+.col-md-11, 
+.col-md-12
+{float: right;}
+@for $i from 1 through 12
+{
+    .col-xs-#{$i}, .col-s-#{$i}, .col-md-#{$i},.col-lg-#{$i}{
+        float: right;
+    }
+}
+
+.btn-primary , .btn-primary:active{
+    color: #fff;
+    background-color: $primary-color;
+    border-color: darken($primary-color, 8%);
+}
+
+.btn-primary:hover,  .btn-primary:focus,
+.btn-primary:active:hover,
+.btn-primary.active:hover,
+.open > .dropdown-toggle.btn-primary:hover,
+.btn-primary:active:focus,
+.btn-primary.active:focus,
+.open > .dropdown-toggle.btn-primary:focus,
+.btn-primary:active.focus,
+.btn-primary.active.focus,
+.open > .dropdown-toggle.btn-primary.focus 
+{
+    color: #fff;
+    background-color: darken($primary-color, 6%);
+    border-color: darken($primary-color, 12%);
+}
+.input-group .form-control:last-child, .input-group-addon:last-child, .input-group-btn:last-child > .btn, .input-group-btn:last-child > .btn-group > .btn, .input-group-btn:last-child > .dropdown-toggle, .input-group-btn:first-child > .btn:not(:first-child), .input-group-btn:first-child > .btn-group:not(:first-child) > .btn {
+    border-radius: 4px 0px 0px 4px;
+    margin: 0;
+}
+.input-group .form-control:first-child, .input-group-addon:first-child, .input-group-btn:first-child > .btn, .input-group-btn:first-child > .btn-group > .btn, .input-group-btn:first-child > .dropdown-toggle, .input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle), .input-group-btn:last-child > .btn-group:not(:last-child) > .btn {
+    border-radius: 0px 4px 4px 0px;
+    margin: 0;
+    border-left-color: transparent;
+}
+
+blockquote{
+	border-left: 0px;
+	border-right: 5px solid #eee;
+}
+.jumbotron p {
+    margin-bottom: 15px;
+    font-size: 1em;
+    font-weight: 200;
+}
+.carousel-caption{
+    margin: 48px 0 0;
+    right: 15px;
+    left: 15px;
+    min-height: 120px;
+    padding: 16px;
+    border-radius: 8px;
+    color: lighten($secondary-color, 80%);
+    bottom: 250px;
+    // background-color: transparentize($secondary-color, 0.6);
+    text-align: right;
+    h3{line-height: 42px;}
+}
+.btn-primary.btn-custom{
+    background-color: transparent;
+    border: 2px solid #fff;
+    padding: 0 8px;
+    transition: background 0.1s;
+    &:hover, &:focus{background-color: $primary-color; border-color: darken($primary-color, 8%);}
+}

@@ -1,0 +1,22 @@
+@import 'main/variables';
+@import 'utilities/animations';
+@import 'utilities/mixins';
+@import 'main/main';
+// @import 'main/fonts';
+ 
+@import 'layout/header';
+@import 'layout/navbar';
+@import 'layout/footer';
+@import 'layout/content';
+@import 'layout/post';
+@import 'layout/media';
+@import 'layout/grid';
+@import 'layout/sidebar';
+
+@import 'pages/cv';
+@import 'pages/blog';
+
+@import 'media/mobile';
+
+// @import 'main/ar';
+// @import 'main/en';
